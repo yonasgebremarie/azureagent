@@ -1,0 +1,22 @@
+metadata:
+  logo: Avatar_Default.svg
+  description: ""
+  modified_at: "1768272747"
+object: agent.version
+id: DataAgent:3
+name: DataAgent
+version: "3"
+description: ""
+created_at: 1768272747
+definition:
+  kind: prompt
+  model: gpt-4o
+  instructions: This is the prompt for the agent
+  tools:
+    - type: azure_ai_search
+      azure_ai_search:
+        indexes:
+          - project_connection_id: /subscriptions/ccc7171a-8e99-48fa-9687-4770d2735a24/resourceGroups/rg-ondemand-sandbox/providers/Microsoft.CognitiveServices/accounts/ais-ondemand-sandbox/projects/hope-ai-hub/connections/srchondemandsandbox3akext
+            index_name: index-knowledge-articles-hope-coach-dev
+            query_type: simple
+            top_k: 5
